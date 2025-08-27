@@ -141,3 +141,22 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+/* === Page background (no grey wash) === */
+body {
+  /* fallback-farge + bilde */
+  background: #0b0b0b url("./bg-custom.jpeg") center center / cover no-repeat;
+  /* iOS liker ikke 'fixed' – vi lar den scrolles for bedre ytelse */
+  background-attachment: scroll;
+}
+
+/* Slå av evt. grå overlay som legges oppå bakgrunnen */
+body::before,
+#app::before,
+.page::before,
+.background-overlay,
+.bg-overlay,
+.bg-overlay::before {
+  background: none !important;
+  opacity: 0 !important;
+  content: none !important;
+}
