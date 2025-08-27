@@ -160,3 +160,64 @@ body::before,
   opacity: 0 !important;
   content: none !important;
 }
+/* === Shared “glass” tokens === */
+:root {
+  --panel-bg: rgba(0,0,0,.45);
+  --panel-border: rgba(255,255,255,.08);
+  --panel-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+/* === Tabell (Current Week Rotation) === */
+table {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  overflow: hidden; /* runder hjørner på header/rows */
+  box-shadow: var(--panel-shadow);
+}
+thead th {
+  background: transparent;
+  font-weight: 700;
+}
+tbody tr + tr {
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+th, td {
+  background: transparent;   /* fjern evt. grå celler */
+}
+
+/* === Gallery-kort === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* behold side-ved-side */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.gallery figure {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  box-shadow: var(--panel-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery figcaption {
+  padding: .6rem .8rem;
+  text-align: center;
+  background: transparent;
+  font-weight: 600;
+}
+
+/* === Små skjermer: litt tettere kort === */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: .75rem;
+  }
+}
