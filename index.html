@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUBG EU Map Rotation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PUBG EU Map Rotation</h1>
+    <p>Automatically updated weekly based on the official Map Service Report (Update 37.1).<br />
+    Current rotation is determined using the PC schedule for European servers.</p>
+  </header>
+
+  <main>
+    <section id="current-rotation">
+      <h2>Current Week Rotation</h2>
+      <!-- Week number and date range will be inserted here -->
+      <p id="week-info"></p>
+      <!--
+        This table lists each map in the current rotation along with its
+        approximate matchmaking probability. Probabilities are calculated
+        using the rule from the Map Service Report that 8×8 km maps have
+        roughly double the matchmaking probability of smaller maps【446618686635954†L397-L449】.
+      -->
+      <table id="rotation-table">
+        <thead>
+          <tr>
+            <th>Map</th>
+            <th>Probability</th>
+          </tr>
+        </thead>
+        <tbody id="map-rows">
+          <!-- Rows will be injected by script.js -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="all-maps">
+      <h2>Map Gallery</h2>
+      <p>Below are the maps currently featured in the EU rotation. Secret room and key locations are highlighted on each image.</p>
+      <div class="gallery">
+        <figure>
+          <img src="images/erangel.png" alt="Erangel map with secret room locations" class="enlargeable" />
+          <figcaption>Erangel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/taego.png" alt="Taego map with secret room locations" class="enlargeable" />
+          <figcaption>Taego</figcaption>
+        </figure>
+        <figure>
+          <img src="images/vikendi.png" alt="Vikendi map with secret room locations" class="enlargeable" />
+          <figcaption>Vikendi</figcaption>
+        </figure>
+        <figure>
+          <img src="images/paramo.png" alt="Paramo map with secret room locations" class="enlargeable" />
+          <figcaption>Paramo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/deston.png" alt="Deston map with secret room locations" class="enlargeable" />
+          <figcaption>Deston</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Information sourced from the official PUBG Map Service Report for Update 37.1【446618686635954†L397-L449】. This page is unofficial and for personal use.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Image modal for enlarging map pictures -->
+  <div id="image-modal" class="image-modal">
+    <span class="close" id="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="Enlarged map" />
+  </div>
+</body>
+</html>
