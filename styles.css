@@ -295,3 +295,18 @@ th, td {
 #rotation-table th:nth-child(2), #rotation-table td:nth-child(2) {
   width: 42%; text-align: right; font-weight: 600;
 }
+/* Heading for Map Gallery – samme størrelse/tykkelse som rotation-heading */
+.gallery-heading {
+  text-align: center;
+  margin: 0 0 .75rem;
+}
+.gallery-heading h2 {
+  margin: 0 0 .2rem;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.4vw + .6rem, 2rem);
+}
+.gallery-heading p {
+  margin: 0;
+  opacity: .9;
+  font-size: clamp(.95rem, 1.2vw + .5rem, 1.05rem);
+}
