@@ -248,3 +248,35 @@ th, td {
   align-items: center;
   justify-content: center;
 }
+/* Velg ønsket kortstørrelse én plass */
+:root { --card: 180px; }  /* prøv 160–200px etter smak */
+
+/* Grid med faste spor (slutter å strekke) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card), var(--card)));
+  gap: 12px;
+  justify-content: center;  /* sentrer radene når det er luft til overs */
+}
+
+/* Kvadratiske bilder i hvert kort */
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;  /* bruk 'contain' hvis du vil unngå beskjæring */
+  display: block;
+}
+
+/* Ens høyde på caption-linja */
+.gallery figcaption {
+  padding: .6rem .8rem;
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Litt mindre på veldig små skjermer */
+@media (max-width: 480px) {
+  :root { --card: 150px; }
+}
