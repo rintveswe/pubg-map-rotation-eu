@@ -249,7 +249,7 @@ th, td {
   justify-content: center;
 }
 /* Velg ønsket kortstørrelse én plass */
-:root { --card: 220px; }  /* prøv 160–200px etter smak */
+:root { --card: 400px; }  /* prøv 160–200px etter smak */
 
 /* Grid med faste spor (slutter å strekke) */
 .gallery {
