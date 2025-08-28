@@ -14,28 +14,23 @@
   </header>
 
   <main>
-    <section id="current-rotation">
-      <h2>Current Week Rotation</h2>
-      <!-- Week number and date range will be inserted here -->
-      <p id="week-info"></p>
-      <!--
-        This table lists each map in the current rotation along with its
-        approximate matchmaking probability. Probabilities are calculated
-        using the rule from the Map Service Report that 8×8 km maps have
-        roughly double the matchmaking probability of smaller maps【446618686635954†L397-L449】.
-      -->
-      <table id="rotation-table">
-        <thead>
-          <tr>
-            <th>Map</th>
-            <th>Probability</th>
-          </tr>
-        </thead>
-        <tbody id="map-rows">
-          <!-- Rows will be injected by script.js -->
-        </tbody>
-      </table>
-    </section>
+   <section id="current-rotation">
+  <div class="rotation-heading">
+    <h2>Current Week Rotation</h2>
+    <p id="week-info"></p>
+  </div>
+
+  <table id="rotation-table" class="rotation">
+    <thead>
+      <tr>
+        <th>Map</th>
+        <th>Probability</th>
+      </tr>
+    </thead>
+    <tbody id="map-rows"></tbody>
+  </table>
+</section>
+
 
     <section id="all-maps">
       <h2>Map Gallery</h2>
