@@ -127,7 +127,7 @@
     const endStr = weekEnd.toLocaleDateString('no-NO', options);
     const weekInfoEl = document.getElementById('week-info');
     if (weekInfoEl) {
-      weekInfoEl.textContent = `Uke ${weekIndex + 1}: ${startStr} – ${endStr}`;
+      weekInfoEl.textContent = `Week ${weekIndex + 1}: ${startStr} – ${endStr}`;
     }
   }
 
