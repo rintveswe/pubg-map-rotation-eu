@@ -221,3 +221,30 @@ th, td {
     gap: .75rem;
   }
 }
+/* Ensartede, kvadratiske map-kort */
+.gallery {
+  /* behold rutenettet ditt – justér min-bredde hvis du vil ha større/mindre kort */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img {
+  width: 100%;
+  /* gjør bildet kvadratisk og like høyt som bredt */
+  aspect-ratio: 1 / 1;
+  /* fyll rammen – kan beskjære litt i kantene */
+  object-fit: cover;
+  display: block;
+}
+
+.gallery figcaption {
+  padding: .6rem .8rem;
+  min-height: 2.2rem;              /* lik høyde på teksten under */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
