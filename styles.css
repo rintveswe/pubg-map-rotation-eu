@@ -280,3 +280,18 @@ th, td {
 @media (max-width: 480px) {
   :root { --card: 150px; }
 }
+/* Sentrer heading + smalere tabell */
+#current-rotation { max-width: 900px; margin: 0 auto 1.5rem; }
+.rotation-heading { text-align: center; margin: 0 0 .75rem; }
+.rotation-heading h2 { margin: 0 0 .2rem; font-weight: 800;
+  font-size: clamp(1.4rem, 2.4vw + .6rem, 2rem); }
+#week-info { margin: 0; opacity: .9;
+  font-size: clamp(.95rem, 1.2vw + .5rem, 1.05rem); }
+
+/* Litt større og tydeligere tabell, kolonner nærmere hverandre */
+#rotation-table { width: 100%; table-layout: fixed; font-size: 1.05rem; }
+#rotation-table th, #rotation-table td { padding: .85rem 1rem; }
+#rotation-table th:nth-child(1), #rotation-table td:nth-child(1) { width: 58%; }
+#rotation-table th:nth-child(2), #rotation-table td:nth-child(2) {
+  width: 42%; text-align: right; font-weight: 600;
+}
